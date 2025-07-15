@@ -240,23 +240,9 @@ nav ul li a:hover {
 footer {
     background: #fafafa;
     border-top: 1px solid #eee;
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     text-align: center;
     margin-top: 2rem;
-}
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 1rem;
-}
-.footer-links a {
-    color: #888;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-}
-.footer-links a:hover {
-    color: #222;
 }
 .footer-info {
     color: #bbb;
@@ -288,10 +274,6 @@ footer address {
     }
     .skills-list {
         flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    .footer-links {
         flex-wrap: wrap;
         gap: 1rem;
     }
@@ -337,11 +319,6 @@ footer address {
     }
     .projects-section h2, .skills-section h2, .contact-section h2, .contact-form-section h2 {
         font-size: 1rem;
-    }
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
     }
     .contact-info, .socials {
         padding: 1rem;
