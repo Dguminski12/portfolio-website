@@ -82,6 +82,21 @@ nav ul li a:hover {
     color: var(--text-color);
     border-bottom: 2px solid var(--text-color);
 }
+
+.dm-button {
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+}
+.dm-button:hover {
+    background: #222;
+    color: var(--bg-color);
+}
+
 /* Hamburger styles */
 .nav-toggle {
     display: none;
