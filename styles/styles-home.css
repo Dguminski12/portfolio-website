@@ -55,11 +55,23 @@ nav ul li a:hover {
 }
 
 /* About Section */
+.banner {
+    max-width: 100%;
+    background-image: url("../media/about-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem;
+}
+
 .about-section {
     max-width: 1100px;
-    margin: 3rem auto 0 auto;
+    margin: 2rem auto;
     padding: 2rem 1rem 3rem 1rem;
+    background-color: white;
+    border-radius: 10px;
 }
+
 .about-section h1 {
     font-size: 1.5rem;
     font-weight: bold;

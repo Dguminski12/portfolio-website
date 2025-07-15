@@ -56,11 +56,24 @@ nav ul li a:hover {
 }
 
 /* Hero Section */
+
+.banner {
+    max-width: 100%;
+    background-image: url("../media/about-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
 .contact-hero {
     max-width: 700px;
-    margin: 3rem auto 2rem auto;
+    margin: 2rem auto;
     padding: 2rem 1rem 1rem 1rem;
     text-align: center;
+    background-color: white;
+    border-radius: 10px;
 }
 .contact-hero h1 {
     font-size: 1.5rem;
