@@ -4,16 +4,26 @@
     margin: 0;
     padding: 0;
 }
-
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --primary-color: #444;
-  --secondary-color: #888;
-  --card-bg: #fafafa;
-  --border-color: #eee;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #444;
+    --secondary-color: #888;
+    --card-bg: #fafafa;
+    --border-color: #eee;
 }
-
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --primary-color: #ccc;
+    --secondary-color: #aaa;
+    --card-bg: #1e1e1e;
+    --border-color: #333;
+}
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     color: var(--text-color);
@@ -22,7 +32,6 @@ body {
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
 }
-
 a {
     color: inherit;
     text-decoration: none;
@@ -30,19 +39,15 @@ a {
 ul {
     list-style: none;
 }
-
-.dark-mode {
-  --bg-color: #121212;
-  --text-color: #f5f5f5;
-  --primary-color: #ccc;
-  --secondary-color: #aaa;
-  --card-bg: #1e1e1e;
-  --border-color: #333;
+img, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Header & Navigation */
 header {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
     background: var(--bg-color);
 }
@@ -77,7 +82,6 @@ nav ul li a:hover {
     color: var(--text-color);
     border-bottom: 2px solid var(--text-color);
 }
-
 /* Hamburger styles */
 .nav-toggle {
     display: none;
@@ -116,7 +120,6 @@ nav ul li a:hover {
         left: 0;
         right: 0;
         background: var(--bg-color);
-        border-bottom: 1px solid var(--border-color);
         max-height: 0;
         overflow: hidden;
         width: 100vw;
@@ -147,7 +150,7 @@ nav ul li a:hover {
     }
 }
 
-/* About Section */
+/* Banner Section */
 .banner {
     max-width: 100%;
     background-image: url("../media/about-bg.jpg");
@@ -155,16 +158,16 @@ nav ul li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     padding: 1rem;
+    margin-bottom: 4rem;
 }
-
 .about-section {
     max-width: 1100px;
     margin: 2rem auto;
     padding: 2rem 1rem 3rem 1rem;
     background-color: var(--bg-color);
     border-radius: 10px;
+    text-align: center;
 }
-
 .about-section h1 {
     font-size: 1.5rem;
     font-weight: bold;
@@ -240,13 +243,11 @@ nav ul li a:hover {
     justify-content: center;
     position: relative;
 }
-
 .project-image img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 4px;
 }
-
 .project-card h3 {
     font-size: 1rem;
     font-weight: bold;
@@ -260,8 +261,8 @@ nav ul li a:hover {
 /* Skills Section */
 .skills-section {
     max-width: 1100px;
-    margin: 0 auto;
-    padding: 3rem 1rem 3rem 1rem;
+    margin: 0 auto 2rem auto;
+    padding: 3rem 1rem 2rem 1rem;
     text-align: center;
     border-top: 2px solid var(--border-color);
 }
@@ -269,11 +270,14 @@ nav ul li a:hover {
     font-size: 1.2rem;
     font-weight: normal;
     margin-bottom: 2rem;
+    color: var(--text-color);
 }
 .skills-list {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 .skill-icon {
     width: 60px;
@@ -282,13 +286,72 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     position: relative;
+    background: var(--card-bg);
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    margin-bottom: 0.5rem;
 }
-
 .skill-icon img {
     max-width: 70%;
     max-height: 70%;
 }
+/* Other Tools & Technologies */
+.skills-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    list-style: disc inside;
+    margin: 0 auto;
+    padding: 0;
+}
 
+/* CV Section */
+.cv-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    padding: 2rem 1rem;
+}
+.cv-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.cv-section > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+.cv-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    color: var(--primary-color);
+}
+.cv-section ul {
+    margin-bottom: 1.2rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding-left: 1.2rem;
+}
+.cv-section li {
+    margin-bottom: 0.7rem;
+}
+.cv-section span {
+    color: var(--secondary-color);
+    font-size: 0.96em;
+}
+.cv-section > div > div {
+    flex: 1 1 250px;
+    min-width: 220px;
+}
 
 /* Contact Section */
 .contact-section {
@@ -315,7 +378,9 @@ nav ul li a:hover {
     align-items: center;
 }
 .contact-section input,
-.contact-section textarea {
+.contact-section textarea,
+.contact-form-section input,
+.contact-form-section textarea {
     width: 100%;
     max-width: 350px;
     padding: 0.6rem;
@@ -323,12 +388,16 @@ nav ul li a:hover {
     border-radius: 4px;
     font-size: 0.97rem;
     background: var(--bg-color);
+    color: var(--text-color);
+    box-sizing: border-box;
 }
-.contact-section textarea {
+.contact-section textarea,
+.contact-form-section textarea {
     min-height: 60px;
     resize: vertical;
 }
-.contact-section button[type="submit"] {
+.contact-section button[type="submit"],
+.contact-form-section button[type="submit"] {
     padding: 0.5rem 1.2rem;
     background: var(--primary-color);
     color: var(--bg-color);
@@ -339,14 +408,80 @@ nav ul li a:hover {
     margin-top: 0.5rem;
     transition: background 0.2s;
 }
-.contact-section button[type="submit"]:hover {
+.contact-section button[type="submit"]:hover,
+.contact-form-section button[type="submit"]:hover {
     background: #222;
+}
+
+/* Contact Details & Socials */
+.contact-details {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact-info, .socials {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1.5rem 2rem;
+    min-width: 250px;
+    text-align: center;
+}
+.contact-info h2, .socials h2 {
+    font-size: 1.05rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.contact-info ul {
+    padding: 0;
+}
+.contact-info li {
+    margin-bottom: 0.7rem;
+    color: var(--primary-color);
+    font-size: 0.98rem;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    filter: grayscale(1) brightness(0.7);
+    transition: filter 0.2s;
+}
+.social-icons a:hover img {
+    filter: none;
+}
+
+/* Contact Form Section (for contact-us.html) */
+.contact-form-section {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem 1rem 2rem 1rem;
+    text-align: center;
+}
+.contact-form-section h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
 }
 
 /* Footer */
 footer {
     background: var(--card-bg);
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--border-color);
     padding: 1rem 1rem 1rem 1rem;
     text-align: center;
     margin-top: 2rem;
@@ -363,58 +498,58 @@ footer address {
 
 /* Responsive */
 @media (max-width: 1024px) {
-    nav, .about-section, .projects-section, .skills-section, .contact-section, .contact-hero, .contact-details, .contact-form-section {
+    nav, .about-section, .projects-section, .skills-section, .contact-section, .contact-hero, .contact-details, .contact-form-section, .cv-section {
         max-width: 95vw;
         padding-left: 2vw;
         padding-right: 2vw;
+        box-sizing: border-box;
     }
     .projects-list, .skills-list, .footer-links {
         gap: 1.2rem;
     }
 }
-
 @media (max-width: 900px) {
-    .projects-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-    .skills-list {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    .contact-details {
+    .projects-list, .skills-list, .contact-details, .cv-section > div {
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
     }
 }
-
 @media (max-width: 700px) {
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+    .about-section, .projects-section, .skills-section, .contact-section, .contact-hero, .contact-details, .contact-form-section, .cv-section {
+        padding: 1.2rem 0.5rem;
+        max-width: 100vw;
+        box-sizing: border-box;
     }
-    nav ul {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    .about-section, .projects-section, .skills-section, .contact-section, .contact-hero, .contact-details, .contact-form-section {
-        padding: 1.5rem 0.5rem;
-    }
-    .project-card {
+    .project-card, .skill-icon, .contact-info, .socials {
         width: 100%;
         min-width: 0;
+        box-sizing: border-box;
     }
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
+    .banner {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
-
 @media (max-width: 500px) {
+    .about-section, .projects-section, .skills-section, .contact-section, .contact-hero, .contact-details, .contact-form-section, .cv-section {
+        padding: 0.7rem 0.2rem;
+    }
+    .skills-list, .projects-list, .contact-details {
+        gap: 0.7rem;
+    }
+    .contact-info, .socials {
+        min-width: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .contact-section input,
+    .contact-section textarea,
+    .contact-form-section input,
+    .contact-form-section textarea {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
     .logo {
         font-size: 1rem;
     }
@@ -428,20 +563,7 @@ footer address {
     .projects-section h2, .skills-section h2, .contact-section h2, .contact-form-section h2 {
         font-size: 1rem;
     }
-    .contact-info, .socials {
-        padding: 1rem;
-    }
     .project-card {
         padding: 1rem 0.5rem;
-    }
-    .skills-list {
-        gap: 0.5rem;
-    }
-    .contact-section input,
-    .contact-section textarea,
-    .contact-form-section input,
-    .contact-form-section textarea {
-        max-width: 100%;
-        font-size: 0.95rem;
     }
 }
