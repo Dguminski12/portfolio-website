@@ -1,0 +1,222 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    background: #fff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+/* Header & Navigation */
+header {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1rem 0;
+    background: #fff;
+}
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+}
+nav ul li a {
+    font-size: 0.95rem;
+    color: #444;
+    padding: 0.5rem 0;
+    transition: color 0.2s;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    color: #222;
+    border-bottom: 2px solid #222;
+}
+
+/* Hero Section */
+.contact-hero {
+    max-width: 700px;
+    margin: 3rem auto 2rem auto;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+.contact-hero h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.contact-hero p {
+    color: #888;
+    font-size: 0.97rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Contact Details & Socials */
+.contact-details {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact-info, .socials {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 1.5rem 2rem;
+    min-width: 250px;
+    text-align: center;
+}
+.contact-info h2, .socials h2 {
+    font-size: 1.05rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.contact-info ul {
+    padding: 0;
+}
+.contact-info li {
+    margin-bottom: 0.7rem;
+    color: #444;
+    font-size: 0.98rem;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    filter: grayscale(1) brightness(0.7);
+    transition: filter 0.2s;
+}
+.social-icons a:hover img {
+    filter: none;
+}
+
+/* Contact Form */
+.contact-form-section {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    padding: 2rem 1rem 2rem 1rem;
+    text-align: center;
+}
+.contact-form-section h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+}
+.contact-form-section input,
+.contact-form-section textarea {
+    width: 100%;
+    max-width: 350px;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.97rem;
+    background: #fafafa;
+}
+.contact-form-section textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+.contact-form-section button[type="submit"] {
+    padding: 0.5rem 1.2rem;
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.2s;
+}
+.contact-form-section button[type="submit"]:hover {
+    background: #222;
+}
+
+/* Footer */
+footer {
+    background: #fafafa;
+    border-top: 1px solid #eee;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.footer-links a {
+    color: #888;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #222;
+}
+.footer-info {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+footer address {
+    font-style: normal;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    nav ul {
+        gap: 1rem;
+    }
+    .contact-hero,
+    .contact-details,
+    .contact-form-section {
+        padding: 2rem 0.5rem;
+    }
+    .contact-info, .socials {
+        min-width: 0;
+        width: 100%;
+    }
+}
