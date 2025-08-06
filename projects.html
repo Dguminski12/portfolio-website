@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawid Guminski - Projects</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Dawid Guminski</div>
+            <div class="nav-toggle" id="navToggle" aria-label="Open menu" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="skills.html">CV/Skills</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+                <li><button class="dm-button" id="theme-toggle">Dark Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h1>Project Portfolio</h1>
+            <p>Here you'll find a deeper look at some of my favourite projects, including technical concepts, design choices, and a gallery of screenshots.</p>
+        </section>
+
+        <section class="projects-section">
+            <div class="project-detail-card">
+                <h2>Studio Lens</h2>
+                <div class="project-gallery">
+                    <img src="media/fotomatic.png" alt="Studio Lens homepage screenshot">
+                    <img src="media/fotomatic-gallery.png" alt="Studio Lens gallery page">
+                    <img src="media/fotomatic-contact.png" alt="Studio Lens contact page">
+                </div>
+                <div class="project-description">
+                    <p>
+                        <strong>Concepts Used:</strong> HTML5, CSS3, Responsive Design<br>
+                        <strong>Summary:</strong> Studio Lens is a photography studio website built to practice layout, styling, and basic interactivity. I focused on semantic HTML, modular CSS, and making the site look good on both desktop and mobile. The gallery page uses CSS grid, and the contact form includes basic validation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-detail-card">
+                <h2>Weather App</h2>
+                <div class="project-gallery">
+                    <img src="media/weather-home.png" alt="Weather App main screen">
+                    <img src="media/weather-details.png" alt="Weather App details view">
+                </div>
+                <div class="project-description">
+                    <p>
+                        <strong>Concepts Used:</strong> JavaScript, REST APIs, Async/Await, Error Handling<br>
+                        <strong>Summary:</strong> This app fetches live weather data using the OpenWeatherMap API. I learned how to handle asynchronous requests, display loading states, and manage errors gracefully. The UI adapts to different screen sizes and uses custom icons for weather conditions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-detail-card">
+                <h2>Task Tracker</h2>
+                <div class="project-gallery">
+                    <img src="media/tasktracker-list.png" alt="Task Tracker list view">
+                    <img src="media/tasktracker-add.png" alt="Task Tracker add task">
+                </div>
+                <div class="project-description">
+                    <p>
+                        <strong>Concepts Used:</strong> React, State Management, Local Storage<br>
+                        <strong>Summary:</strong> Task Tracker is a simple productivity app built with React. It features dynamic state updates, persistent storage using localStorage, and a clean, minimalist design. I practiced component-based architecture and learned how to lift state for shared functionality.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-info">
+            <p>&copy; 2025 Dawid Guminski</p>
+        </div>
+    </footer>
+
+    <script src="nav-toggle.js"></script>
+    <script src="darkmode.js"></script>
+</body>
+</html>
